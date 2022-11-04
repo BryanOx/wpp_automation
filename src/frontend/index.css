@@ -1,0 +1,13 @@
+#qr-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#qr-wpp-login {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
