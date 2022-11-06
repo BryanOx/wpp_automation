@@ -2,5 +2,5 @@ node_modules
 *.lock
 .env
 dist
-tmp/*
-!tmp/.gitkeep
+shared/tmp/*
+!shared/tmp/.gitkeep

@@ -1,5 +1,5 @@
 Arguments: 
-  /home/bryan/.nvm/versions/node/v16.15.0/bin/node /home/bryan/.yarn/bin/yarn.js start
+  /home/bryan/.nvm/versions/node/v16.15.0/bin/node /home/bryan/.yarn/bin/yarn.js add @redux/toolkit react-redux
 
 PATH: 
   /home/bryan/.cache/activestate/bin:/home/bryan/.local/ActiveState/StateTool/release/bin:/home/bryan/.yarn/bin:/home/bryan/.config/yarn/global/node_modules/.bin:/home/bryan/.cache/activestate/bin:/home/bryan/.local/ActiveState/StateTool/release/bin:/home/bryan/.yarn/bin:/home/bryan/.config/yarn/global/node_modules/.bin:/home/bryan/.nvm/versions/node/v16.15.0/bin:/home/bryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/lampp/bin/php:/snap/bin:/home/bryan/.dotnet/tools:/home/bryan/Android/Sdk/emulator:/home/bryan/Android/Sdk/platform-tools:/home/bryan/Android/Sdk/emulator:/home/bryan/Android/Sdk/platform-tools
@@ -14,25 +14,29 @@ Platform:
   linux x64
 
 Trace: 
-  SyntaxError: /home/bryan/Documents/bryan/projects/wpp_automation/backend/package.json: Unexpected token / in JSON at position 75
-      at JSON.parse (<anonymous>)
-      at /home/bryan/.yarn/lib/cli.js:1629:59
-      at Generator.next (<anonymous>)
-      at step (/home/bryan/.yarn/lib/cli.js:310:30)
-      at /home/bryan/.yarn/lib/cli.js:321:13
+  Error: https://registry.yarnpkg.com/@redux%2ftoolkit: Not found
+      at Request.params.callback [as _callback] (/home/bryan/.yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/home/bryan/.yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/home/bryan/.yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/home/bryan/.yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
 
 npm manifest: 
   {
     "name": "wpp_automation",
     "version": "1.0.0",
     "description": "",
-    // "main": "src/app.ts",
     "scripts": {
       "start": "nodemon src/app.ts",
       "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
-    "author": "",
+    "author": "Bryan Oxley",
     "license": "ISC",
     "devDependencies": {
       "@types/cors": "^2.8.12",

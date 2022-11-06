@@ -45,11 +45,11 @@ class WPPTransporter extends Client implements ClientService {
     })
   };
 
-  async sendMsg({ name, phone, money, message: msg }: any): Promise<any> {
+  async sendMsg({ name, phone, message: msg }: any): Promise<any> {
       try {
         const isSerialized = phone.endsWith('@c.us')
         if (!this.status) return Promise.resolve({ error: 'ESPERANDO LOGIN' });
-        const message = msg ? msg : this.generateMessage(name, money);
+        const message = msg ? msg : this.generateMessage(name);
         console.log(`Intentando obtener el numberId de: ${phone}`);
         const phoneDetails = await this.getNumberId(phone);
         console.log({ phoneDetails, phone });
@@ -77,7 +77,7 @@ class WPPTransporter extends Client implements ClientService {
     // TODO: Create event emitters to listen and update in the front the QR Code
   };
 
-  private generateMessage = (name: string, money: string): string => {
+  private generateMessage = (name: string): string => {
     return `Hola ${name}, como estás?
 Te escribo para recordarte que hoy tendrías que cambiar el prefiltro de tu purificador PSA!
 Cualquier cosa que necesites a las ordenes!
